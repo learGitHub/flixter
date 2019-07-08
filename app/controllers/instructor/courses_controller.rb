@@ -3,12 +3,13 @@ class Instructor::CoursesController < ApplicationController
   before_action :require_authorized_for_current_course, only: [:show]
 
   def new
-    @course = Course.new
+    @course = Course.new  
   end
 
 
   def create
     @course = current_user.courses.create(course_params)
+    #@course.image.create(course_params.merge(course: current_course))   
     if @course.valid?
       redirect_to instructor_course_path(@course)
     else
@@ -30,11 +31,11 @@ class Instructor::CoursesController < ApplicationController
 
   helper_method :current_course
   def current_course
-    @current_course ||= Course.find(params[:id])
+    @course ||= Course.find(params[:id])
   end  
 
   def course_params
-    params.require(:course).permit(:title, :description, :cost)
+    params.require(:course).permit(:title, :description, :cost, :image)
   end
 
 
