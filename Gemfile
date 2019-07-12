@@ -82,3 +82,4 @@ gem 'figaro'
 gem 'fog-aws'
 
 gem 'carrierwave-aws'
+
