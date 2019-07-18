@@ -83,3 +83,5 @@ gem 'fog-aws'
 
 gem 'carrierwave-aws'
 
+gem 'stripe'
+
