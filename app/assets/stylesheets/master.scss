@@ -64,7 +64,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  padding: 10px;
+  margin-top: 12px;
+  margin-bottom: 14px;
+  padding: 20px;
 }
 
 .booyah-box h2, .booyah-box h1 {
@@ -97,8 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .lesson a {
   color: white;
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
   font-size: 15px;
 }
 
@@ -135,6 +135,7 @@ ul .header .fa {
   padding: 8px;
   font-size: 15px;
 }
+
 
 .lessons li b {
   font-size: 25px;

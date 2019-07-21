@@ -1,9 +1,11 @@
 <script>
  
-  $('.new-lesson-button').click(function( event ) {
-    var lessonUrl = $( event.target).data('lesson-url');
-    $('#newLessonForm').attr('action', lessonUrl);
-  });
+    $(function() {
+      $('.new-lesson-button').click(function(event) {
+        var lessonUrl = $(event.target).data('lesson-url');
+        $('#newLessonForm').attr('action', lessonUrl);
+      });
+    });
 
   $(function() {
     $('.sections').sortable({
@@ -44,7 +46,8 @@
   <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br class="clr" />
   -->
-
+<br />
+<br />
     <div class="text-center">
     <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
@@ -63,9 +66,9 @@
           <%= section.title %>
         </div>
         <!-- Button trigger modal New Lesson -->
-        <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
-          New Lesson...
-        </button>
+            <button type="button" class="btn btn-primary btn-sm float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+              New Lesson
+            </button>
 
         <br class="clr" />
         <br class="clr" />
@@ -146,9 +149,11 @@
           <%= f.input :subtitle %>
           <%= f.input :video %>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.submit "Add a lesson", class: 'btn btn-primary' %>
       <% end %>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
       </div>
     </div>
   </div>
