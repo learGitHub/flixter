@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+### **2. Flixter**
 
-* Ruby version
+Plataforma de streaming de video estilo Netflix, donde los usuarios pueden ver y subir contenido.
 
-* System dependencies
 
-* Configuration
+## Tecnologías
 
-* Database creation
+- **Ruby** 2.5.3
+- **Rails** 5.2.3
+- **Base de datos:** PostgreSQL
+- **Frontend:** Bootstrap, jQuery
+- **Autenticación:** Devise
+- **Subida de videos:** CarrierWave + AWS S3
 
-* Database initialization
+## Funcionalidades principales
 
-* How to run the test suite
+- [x] Autenticación de usuarios
+- [x] Subida de videos con CarrierWave
+- [x] Visualización de videos
+- [x] Sistema de suscripciones (Stripe)
+- [x] Comentarios en videos
+- [x] Perfil de usuario
 
-* Services (job queues, cache servers, search engines, etc.)
+## Instalación local
 
-* Deployment instructions
-
-* ...
+```bash
+git clone https://github.com/tu-usuario/flixter.git
+cd flixter
+bundle install
+rails db:create db:migrate db:seed
+rails server
