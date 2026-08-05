@@ -2,7 +2,7 @@
 
 ---
 
-### **2. Flixter**
+### **Flixter**
 
 Plataforma de streaming de video estilo Netflix, donde los usuarios pueden ver y subir contenido.
 
